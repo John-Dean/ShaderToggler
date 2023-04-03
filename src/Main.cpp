@@ -125,6 +125,7 @@ void loadShaderTogglerIniFile()
 	for(auto& group: g_toggleGroups)
 	{
 		group.loadState(iniFile, groupCounter);		// groupCounter is normally 0 or greater. For when the old format is detected, it's -1 (and there's 1 group).
+		group.toggleActive();
 		groupCounter++;
 	}
 }
